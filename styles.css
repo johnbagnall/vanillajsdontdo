@@ -1,0 +1,57 @@
+body {
+    background: pink;
+    font-family: 'Space Mono', monospace;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#spoiler {
+    display: none;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid black;
+}
+
+input[type="submit"],
+button {
+    background: yellow;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid black;
+}
+
+table {
+    margin: 0 auto;
+}
+
+tbody {
+    padding: 10px;
+}
+
+th, tbody {
+    font-size: 24px;
+}
+
+#add-name {
+    text-align: center;
+}
+
+#counter {
+    font-size: 44px;
+    text-align: center;
+}
+
+#header {
+    font-size: 30px;
+    padding: 20px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Don't Do List using vanilla JavaScript</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="main">
+<p id="counter"></p>
+
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()" style="text-align:center;"> 
+  <input type="text" id="add-name" placeholder="New thing to not do">
+  <input type="submit" value="Add">
+</form>
+
+<div id="spoiler" role="aria-hidden"> 
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="edit-name">
+    <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">
+        &#10006</a>
+  </form>
+</div>
+
+  <table>
+    <tr>
+      <th id="header">Don't Do These Things</th>
+    </tr>
+      <tbody id="lists">
+      </tbody>
+  </table>
+</div>
+
+<h2>Look, this won't save your list, or add it to a db or anything like that. It's just me messing about with JS, no libraries, nothing, just vanilla JS, I know, what a maniac.</h2>
+
+</body>
+<script src="app.js"></script>
+</html>
