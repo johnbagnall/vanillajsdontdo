@@ -39,7 +39,7 @@ var app = new function() {
     var list = el.value;
     if (list) {
       // document.getElementById('header').style.display = "block";
-      this.lists.push(list.trim());
+      this.lists.unshift(list.trim());
       el.value = '';
       this.FetchAll();
     }
