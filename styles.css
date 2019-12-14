@@ -1,11 +1,15 @@
-body {
+html {
     background: pink;
+}
+
+body {
     font-family: 'Space Mono', monospace;
 }
 
 .main {
     width: 100%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 #spoiler {
@@ -25,9 +29,18 @@ input[type="submit"],
 button {
     background: yellow;
     padding: 10px;
-    font-size: 24px;
+    font-size: 14px;
     font-family: 'Space Mono', monospace;
     border: 1px solid black;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    cursor: pointer;
+}
+
+.col {
+    width: 70px !important;
 }
 
 table {
@@ -42,10 +55,6 @@ th, tbody {
     font-size: 24px;
 }
 
-#add-name {
-    text-align: center;
-}
-
 #counter {
     font-size: 44px;
     text-align: center;
@@ -54,4 +63,12 @@ th, tbody {
 #header {
     font-size: 30px;
     padding: 20px;
+}
+
+.list-text {
+    font-size: 28px;
+}
+
+#list {
+    width: 500px;
 }

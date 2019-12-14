@@ -3,38 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Don't Do List using vanilla JavaScript</title>
+  <link rel="stylesheet" tyep="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
 <div class="main">
 <p id="counter"></p>
 
-<form action="javascript:void(0);" method="POST" onsubmit="app.Add()" style="text-align:center;"> 
-  <input type="text" id="add-name" placeholder="New thing to not do">
-  <input type="submit" value="Add">
-</form>
-
-<div id="spoiler" role="aria-hidden"> 
-  <form action="javascript:void(0);" method="POST" id="saveEdit">
-    <input type="text" id="edit-name">
-    <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">
-        &#10006</a>
-  </form>
+<div class="columns is-multiline">
+  <div class="column has-text-centered">
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+      <input type="text" id="add-name" placeholder="New thing to not do">
+      <input type="submit" value="Add">
+    </form>
+    
+    <div id="spoiler" role="aria-hidden"> 
+      <form action="javascript:void(0);" method="POST" id="saveEdit">
+        <input type="text" id="edit-name">
+        <input type="submit" value="OK" /> <a onclick="CloseInput()" aria-label="Close">
+            &#10006</a>
+      </form>
+  </div>
 </div>
 
-  <table>
-    <tr>
-      <th id="header">Don't Do These Things</th>
-    </tr>
-      <tbody id="lists">
-      </tbody>
-  </table>
+</div>
+
+<div class="columns">
+  <div class="column is-offset-4 is-two-thirds">
+    <div id="lists"></div>
+  </div>
 </div>
 
 <h2>Look, this won't save your list, or add it to a db or anything like that. It's just me messing about with JS, no libraries, nothing, just vanilla JS, I know, what a maniac.</h2>
+
+</div>
 
 </body>
 <script src="app.js"></script>

@@ -1,3 +1,4 @@
+
 var app = new function() {
   this.el = document.getElementById('lists');
   this.lists = ['be a dick', 'waste time', 'be lazy', 'be unproductive'];
@@ -12,7 +13,7 @@ var app = new function() {
       }
       el.innerHTML = data + ' ' + name ;
     } else {
-      document.getElementById('header').style.display = "none";
+      // document.getElementById('header').style.display = "none";
       el.innerHTML = 'No ' + name;
     }
   };
@@ -21,11 +22,13 @@ var app = new function() {
     var data = '';
     if (this.lists.length > 0) {
       for (i = 0; i < this.lists.length; i++) {
-        data += '<tr>';
-        data += '<td>' + this.lists[i] + '</td>';
-        data += '<td><button onclick="app.Edit(' + i + ')">Edit</button></td>';
-        data += '<td><button onclick="app.Delete(' + i + ')">Delete</button></td>';
-        data += '</tr>';
+        data += '<div class="columns is-multiline">';
+        data += '<div class="column is-multiline list-text is-one-third is-multiline">' + this.lists[i] + '</div>';
+        data += '</div>';
+        data += '<div class="columns is-mobile">';
+        data += '<div class="column col is-one-quarter"><button onclick="app.Edit(' + i + ')">Edit</button></div>';
+        data += '<div class="column col is-one-quarter"><button onclick="app.Delete(' + i + ')">Delete</button></div>';
+        data += '</div>';
       }
     }
     this.Count(this.lists.length);
@@ -35,7 +38,7 @@ var app = new function() {
     el = document.getElementById('add-name');
     var list = el.value;
     if (list) {
-      document.getElementById('header').style.display = "block";
+      // document.getElementById('header').style.display = "block";
       this.lists.push(list.trim());
       el.value = '';
       this.FetchAll();
